@@ -1,0 +1,18 @@
+<div *ngIf="isShow">
+<ion-card *ngIf="repeat == 0">
+    <ion-img src="/assets/data_not_found.png"></ion-img>
+    <ion-card-header>
+        <ion-card-subtitle>{{dataNotFoundMessage}}</ion-card-subtitle>
+    </ion-card-header>
+</ion-card>
+<ion-card class="welcome-card" *ngFor="let i of loop">
+    <ion-skeleton-text animated style="width: 90%; height: 150px; margin: 5%;" slot="start"></ion-skeleton-text>
+      <div class="ion-padding custom-skeleton">
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+          <ion-skeleton-text animated></ion-skeleton-text>
+          <ion-skeleton-text animated style="width: 88%"></ion-skeleton-text>
+          <ion-skeleton-text animated style="width: 70%"></ion-skeleton-text>
+          <ion-skeleton-text animated style="width: 60%"></ion-skeleton-text>
+      </div>
+</ion-card>
+</div>

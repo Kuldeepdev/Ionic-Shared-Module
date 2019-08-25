@@ -1,0 +1,11 @@
+<ion-card class="welcome-card"  (click)="detailPage(post)" [class.p0]="config == 2">
+  <ion-img [src]="post?.image"></ion-img>
+  <ion-card-header>
+    <ion-card-subtitle>{{post?.date}}</ion-card-subtitle>
+    <ion-card-title>{{post?.title}}</ion-card-title>
+  </ion-card-header>
+  <ion-card-content>
+    <p [innerHTML]="post?.descriptionShort" *ngIf="config == 1"></p>
+    <p [innerHTML]="post?.description" *ngIf="config == 2"></p>
+  </ion-card-content>
+</ion-card>
